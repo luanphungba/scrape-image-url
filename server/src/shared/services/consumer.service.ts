@@ -23,6 +23,7 @@ export class ConsumerService implements OnModuleInit {
     try {
       await this.channelWrapper.addSetup(async (channel: ConfirmChannel) => {
         await channel.assertQueue('urlScrapeQueue', { durable: true }); // Update queue name
+        await channel.prefetch(10); // Set the maximum number of messages to handle concurrently
         await channel.consume('urlScrapeQueue', async (message) => { // Update queue name
           if (message) {
             const content = JSON.parse(message.content.toString());
