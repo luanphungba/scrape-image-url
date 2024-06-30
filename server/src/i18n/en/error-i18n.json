@@ -1,0 +1,9 @@
+{
+    "user_not_found": "User not found!",
+    "registerd_email_existed": "This email is already registered!",
+    "email_not_confirm": "Email not confirmed!",
+    "account_login_limit": "The account is locked due to multiple sign-in failures. Please try again later.",
+    "incorrect_login": "email or password is wrong.",
+    "password_token_expired": "The reset password link is wrong or expired",
+    "confirm_token_expired": "The email confirmation link is wrong or expired."
+}

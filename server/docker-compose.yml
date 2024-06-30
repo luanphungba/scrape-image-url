@@ -1,0 +1,47 @@
+name: api-backend
+version: "3.7"
+services:
+  api:
+    build: .
+    ports:
+      - ${PORT}:${PORT}
+    command: yarn start:dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - db
+      - rabbitmq
+    networks:
+      - api-network
+    env_file:
+      - .env
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    networks:
+      - api-network
+  rabbitmq:
+    image: rabbitmq:3-management
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - api-network
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+volumes:
+  postgres:
+    driver: local
+networks:
+  api-network:
+    driver: bridge

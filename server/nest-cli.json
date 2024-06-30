@@ -1,0 +1,19 @@
+{
+  "language": "ts",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "src",
+  "compilerOptions": {
+    "assets": [
+      {
+        "include": "i18n/**/*",
+        "watchAssets": true,
+        "outDir": "dist/i18n"
+      },
+      {
+        "include": "**/*.hbs",
+        "watchAssets": true
+      }
+    ]
+  },
+  "watchAssets": true
+}

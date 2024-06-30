@@ -1,0 +1,73 @@
+{
+  "name": "frontend",
+  "version": "3.46.0",
+  "scripts": {
+    "dev:next": "next dev",
+    "dev": "run-p dev:*",
+    "build": "next build",
+    "start": "next start -p 3003",
+    "build-stats": "cross-env ANALYZE=true npm run build",
+    "clean": "rimraf .next .swc out coverage"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.7",
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "@hookform/resolvers": "^3.6.0",
+    "@t3-oss/env-nextjs": "^0.9.2",
+    "antd": "^5.18.0",
+    "autoprefixer": "^10.4.19",
+    "clsx": "^2.1.1",
+    "cssnano": "^7.0.1",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
+    "moment": "^2.30.1",
+    "next": "^14.1.4",
+    "next-intl": "^3.11.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.5",
+    "swr": "^2.2.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@commitlint/cz-commitlint": "^19.2.0",
+    "@next/bundle-analyzer": "^14.1.4",
+    "@playwright/test": "^1.43.0",
+    "@types/js-cookie": "^3.0.6",
+    "@types/react": "^18.2.74",
+    "commitizen": "^4.3.0",
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "conventionalcommits"
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  },
+  "author": "Ixartz (https://github.com/ixartz)"
+}

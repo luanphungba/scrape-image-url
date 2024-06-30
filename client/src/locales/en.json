@@ -1,0 +1,25 @@
+{
+  "signIn": {
+    "title": "Sign In",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Enter your email",
+    "emailRequired": "Please enter your email",
+    "emailInvalid": "Please enter a valid email",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "passwordRequired": "Please enter your password",
+    "signInButton": "Sign In",
+    "successMessage": "Logged in successfully.",
+    "errorMessage": "Incorrect email or password.",
+    "meta_title": "Sign In",
+    "meta_description": "Sign in to your account"
+  },
+  "notfound": {
+    "meta_title": "Not Found",
+    "meta_description": "The page you are looking for does not exist"
+  },
+  "media": {
+    "meta_title": "Media",
+    "meta_description": "Media"
+  }
+}

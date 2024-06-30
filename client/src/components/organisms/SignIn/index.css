@@ -1,0 +1,15 @@
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 400px;
+  margin: 0 auto;
+}
+.sign-in-container .ant-input {
+  width: 100% !important;
+}
+.ant-form {
+  width: 100%;
+}
