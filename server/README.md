@@ -1,4 +1,5 @@
-Momos Project
+Please follow these steps to run the project
+
 Build docker containers
 
 ```bash
